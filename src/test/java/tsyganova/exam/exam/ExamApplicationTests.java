@@ -16,7 +16,7 @@ class ExamApplicationTests {
         @Test
     void testFormula()
     {
-        assertEquals(4,Calculator.Calculate(2));
+        assertEquals(-34,Calculator.Calculate(2));
     }
     
     @Test
@@ -25,7 +25,7 @@ class ExamApplicationTests {
         FormulaResults fr = new FormulaResults();
         double[] args = new double[]{3d, 4d, 5d};
         fr.SetArgs(args);
-        assertEquals("[9.0, 16.0, 25.0]", fr.Calculate());
+        assertEquals("[-72.0, -86.0, -70.0]", fr.Calculate());
     }
 }
 

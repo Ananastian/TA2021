@@ -5,6 +5,8 @@
  */
 package tsyganova.exam.ta;
 
+import static java.lang.Math.pow;
+
 /**
  *
  * @author Admin
@@ -13,6 +15,6 @@ public class Calculator {
     
     public static double Calculate(double x)
     {
-        return x * x; //Сюди вставлять свою формувалу
+        return pow(x,3)+(3*pow(x,2))-(72*x)+90; //Сюди вставлять свою формувалу
     }
 }
