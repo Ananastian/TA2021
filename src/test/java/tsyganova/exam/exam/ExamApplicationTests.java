@@ -16,16 +16,16 @@ class ExamApplicationTests {
         @Test
     void testFormula()
     {
-        assertEquals(-34,Calc.Calculate(2));
+        assertEquals(0.8181818181818182,Calc.Calculate(2));
     }
     
     @Test
     void testForm()
     {
         Formula fr = new Formula();
-        double[] args = new double[]{1d, 2d, 3d, 4d, 5d, 6d, 7d};
+        double[] args = new double[]{0d, 1d, -1d, -2d, -3d, 5d};
         fr.SetArgs(args);
-        assertEquals("[22.0, -34.0, -72.0, -86.0, -70.0, -18.0, 76.0]", fr.Calculate());
+        assertEquals("[1.8, 1.125, 4.5, -9.0, -2.25, 0.45]", fr.Calculate());
     }
 }
 
