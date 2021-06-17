@@ -11,19 +11,15 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-/**
- * 
- * @author Admin
- */
+
 public class Servlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
         throws ServletException, IOException {
-        String x = request.getParameter("x"); //відправляєм строкой
-        double param = Double.parseDouble(x); //конвертуєм
-        double result = Calculator.Calculate(param); //відправляєм на виконання, обробляєм
-        request.setAttribute("result", result); // відправляємо для воводу результату
+        String x = request.getParameter("x"); 
+        double param = Double.parseDouble(x); 
+        double result = Calc.Calculate(param); 
+        request.setAttribute("result", result); 
         request.getRequestDispatcher("index.jsp").forward(request, response);
     }
 }
-// принцип роботи - получили, переконвектірували,відпрацювали, відправили
