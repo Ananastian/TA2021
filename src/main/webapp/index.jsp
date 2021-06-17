@@ -25,8 +25,8 @@
 
         <strong><p>Задана функція: f(x)= 9/(3x+5)</p></strong>
         <%! Formula form = new Formula(64);%>
-        <p>Випадково вибрані аргументи: <%= form.GetArgs()%> </p>
-        <p>Результат виконання функції:<%= form.Calculate()%></p> 
+        <strong><p>Випадково вибрані аргументи:</strong> <%= form.GetArgs()%> </p>
+        <strong><p>Результат виконання функції:</strong><%= form.Calculate()%></p> 
 
         <form action="./formula" method="post" class="form-inline"> 
             <label for="x"><b>Тут можна перевірити виконання функції власноруч, введіть число х:</b></label>
@@ -34,7 +34,7 @@
                 <input  class="form-control" id="x" type="text" name="x"/>
                 <input class="btn btn-success" type="submit" value="- Провести розрахунки -"/>
             </div>
-            <br><p class="mt-3 mb-0"><b>Результат виконаня за формулою 9/(3*x+5): </b><%=request.getAttribute("result")%></p>
+            <p class="mt-3 mb-0"><b>Результат виконаня за формулою 9/(3*x+5): </b><%=request.getAttribute("result")%></p>
         </form>
     </body>
 </html>
