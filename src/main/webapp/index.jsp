@@ -15,19 +15,26 @@
     <body>
         <h1>-Exam work-</h1>
         <h2>-Tsyganova Anastasia IP-11</h2>
-        <p>Завдання:</p>
-        <p>Задана функція:</p>
-        <%! Formula form = new Formula(3);%> <!=
-        <p>Випадково вибрані аргументи: <%= form.GetArgs()%> </p> 
+        <br><strong>Завдання:</strong> 
+        <br>1. Розробити та реалізувати алгоритм для обчислення значень функції:
+        <br>f(x)= 9/(3x+5)
+        <br>2. Створити тести для перевірки працездатності розробленого алгоритму
+        <br>3. Заповнити список з 64 елементів результатами обчислення функції для випадкових значень аргументу типу float.
+        <br>4. Вивести отримані у п.3 результати через веб-інтерфейс
+        <br>5. Забезпечити можливість виведення результатів сортування та пошуку даних в отриманому у п.3 списку (порядок сортування та об'єкт пошуку задається користувачем).
+
+        <strong><p>Задана функція: f(x)= 9/(3x+5)</p></strong>
+        <%! Formula form = new Formula(64);%>
+        <p>Випадково вибрані аргументи: <%= form.GetArgs()%> </p>
         <p>Результат виконання функції:<%= form.Calculate()%></p> 
-        
+
         <form action="./formula" method="post" class="form-inline"> 
             <label for="x"><b>Тут можна перевірити виконання функції власноруч, введіть число х:</b></label>
-                <div class="input-group">
-                    <input  class="form-control" id="x" type="text" name="x"/>
-                    <input class="btn btn-success" type="submit" value="- Провести розрахунки -"/>
-                </div>
-            <p class="mt-3 mb-0"><b>Результат виконаня за формулою: </b><%=request.getAttribute("result")%></p>
+            <div class="input-group">
+                <input  class="form-control" id="x" type="text" name="x"/>
+                <input class="btn btn-success" type="submit" value="- Провести розрахунки -"/>
+            </div>
+            <br><p class="mt-3 mb-0"><b>Результат виконаня за формулою 9/(3*x+5): </b><%=request.getAttribute("result")%></p>
         </form>
     </body>
 </html>

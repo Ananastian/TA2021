@@ -6,11 +6,11 @@ import java.util.Random;
 
 public class Formula {
 
-    public List<Double> args; //список
-    public static List<Double> results; //список
+    public List<Double> args;
+    public static List<Double> results; 
 
-    public Formula() {
-        results = new LinkedList<>();
+    public Formula() { 
+        results = new LinkedList<>(); 
         args = new LinkedList<>();
     }
 
@@ -20,7 +20,7 @@ public class Formula {
 
         Random random = new Random();
         for (int i = 0; i < length; i++) {
-            args.add((double) random.nextInt(100)); //вибираєм числа до 100
+             args.add((double) random.nextInt(100));
         }
     }
 

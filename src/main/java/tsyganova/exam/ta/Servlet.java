@@ -12,14 +12,14 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 
-public class Servlet extends HttpServlet {
-    @Override
+public class Servlet extends HttpServlet { 
+      @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
         throws ServletException, IOException {
-        String x = request.getParameter("x"); 
-        double param = Double.parseDouble(x); 
-        double result = Calc.Calculate(param); 
-        request.setAttribute("result", result); 
+        String x = request.getParameter("x");
+        double param = Double.parseDouble(x);
+        double result = Calc.Calculate(param);
+        request.setAttribute("result", result);
         request.getRequestDispatcher("index.jsp").forward(request, response);
     }
 }
